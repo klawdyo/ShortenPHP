@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'lib/utils/Http.php';
+require_once 'Http.php';
 
 
 class Shorten{
@@ -106,20 +106,22 @@ class Shorten{
     }
     
     /**
-      * 
+      * Centralizes the request options
       *
-      * @param
-      * @return 
+      * @param string $method Request method type
+      * @param string $url Url to send data
+      * @param array $params Params to send to webservice
+      * @return mixed Data returned from Webservice
       */
-    public function request($method = 'post', $url = 'url', $params = array()){
+    protected function request($method = 'post', $url, $params = array()){
         return Http::$method($url, $params);
     }
     
     /**
-      * 
+      * Parses return
       *
-      * @param
-      * @return 
+      * @param mixed $output Data returned from webservice
+      * @return string short url
       */
     protected function parseReturn($output){
         switch($this->objectPlugin->defaultReturnType):
@@ -141,6 +143,12 @@ class Shorten{
         endswitch;
     }
     
+    /**
+      * Loades the plugin file
+      *
+      * @param string $plugin Plugin name
+      * @return void
+      */
     protected function load($plugin){
         $file = dirname(__FILE__) . '/Plugins/' . $plugin . '.php';
         

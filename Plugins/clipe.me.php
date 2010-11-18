@@ -17,7 +17,6 @@ class clipeme{
      /*
       @var $defaultParams
       Parâmetros padronizados que serão enviados em todas as requisições
-      form
      */
     public $defaultParams = array('return_url_text'=>1, 'api' => 1);
     
