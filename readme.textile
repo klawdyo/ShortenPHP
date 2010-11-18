@@ -30,4 +30,8 @@ h3. Using with authentication
 
 pre. $url = new Shorten('bit.ly');
 echo $url->auth('klawdyo', E_sad86dfs8sdf5sd5f7ds57d6s)
-    ->toShort('http://www.google.com')
+         ->toShort('http://www.google.com')
+
+h2. Requeriments
+
+Shorten class requires "Http class":https://github.com/klawdyo/spaghetti-lib/blob/master/utils/Http.php
