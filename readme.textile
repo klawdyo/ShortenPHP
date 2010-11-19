@@ -1,77 +1,39 @@
 h1. Introduction
 
-
-
 h4. Shorten is a php class that centralizes the main shorten url services in the Web.
-
-
 
 h2. Available Plugins
 
-
-
 * miud.in
-
 * bit.ly - Requires authentication
-
 * goo.gl
-
 * zip.net
-
 * migre.me
-
 * toma.ai
-
 * bitw.in
-
 * pra.la
-
 * is.gd
-
 * tinyUrl
-
 * and many more to come
-
-
 
 h2. How to use
 
-
-
 pre. $url = new Shorten('goo.gl');
 
-
-
 pre. //Getting the short url
-
 echo $url->toShort('http://google.com');
 
-
-
 pre. //Getting Qrcode url image
-
 echo '<img src="' . $url->qrcode() . '" />';
-
-
 
 h3. Using with authentication
 
-
-
 pre. $url = new Shorten('bit.ly');
-
-
 echo $url->auth('klawdyo', 'R_sad86dfs8sdf5sd5f7ds57d6s987asdds')
-
-         ->toShort('http://www.google.com')
-
-;
+         ->toShort('http://www.google.com');
 
 h2. Todo
 
-
-
 * toShort() will accept an array as parameter;
-
 * customize() will define the final code to generated url. Only for services that accept. For others services, nothing happens;
 * expand() forces the discover of the destination url
