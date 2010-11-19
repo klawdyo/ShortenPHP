@@ -186,7 +186,6 @@ class Shorten{
             break;
         
             case 'xml':
-                //pr($output);
                 $xml = new SimpleXMLElement($output);
                 $return = $xml->xpath($this->objectPlugin->urlKey);
                 return (string)$return[0];
