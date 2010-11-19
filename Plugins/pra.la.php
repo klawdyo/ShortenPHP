@@ -41,7 +41,7 @@ class prala{
      */
     public $urlKey; //It's empty. txt example
     //public $urlKey = 'short_url'; //json example key
-    //public $urlKey = 'parent/children1/short_url'; //xml example xpath
+    //public $urlKey = 'prala/shortened'; //xml example xpath
 
 
 /********************************

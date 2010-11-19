@@ -45,6 +45,7 @@ require_once 'Http.php';
   *  [+] load() loads the specified plugin
   *  [m] __construct() now using Try/Catch
   *  [m] load() throws an exception if the required plugin don't exists.
+  *  [m] Fixed xml bug into parseReturn()
   *
   *-----------------------------------------
   * TO DO
@@ -53,6 +54,8 @@ require_once 'Http.php';
   * 
   * - customize() will define the final code to generated url. Only for services
   * that accept. For others services, nothing happens.
+  *
+  * - expand() forces the target url discover
   */
 
 class Shorten{
@@ -145,7 +148,7 @@ class Shorten{
                                      $params);
             //Parsing url
             $this->shortUrl = $this->parseReturn($output);
-            
+
             //Key
             preg_match('([^/]+$)', $this->shortUrl, $key);
             $this->keyUrl = reset($key);
@@ -183,9 +186,10 @@ class Shorten{
             break;
         
             case 'xml':
-                $xml = new SimpleXMLElement;
-                $xml->simplexml_load_string($output);
-                return $xml->xpath($this->objectPlugin->urlKey);
+                //pr($output);
+                $xml = new SimpleXMLElement($output);
+                $return = $xml->xpath($this->objectPlugin->urlKey);
+                return (string)$return[0];
             break;
         
             case 'txt': case 'plain': default:
