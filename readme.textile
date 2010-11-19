@@ -34,4 +34,5 @@ echo $url->auth('klawdyo', 'R_sad86dfs8sdf5sd5f7ds57d6s987asdds')
 
 h2. Todo
 
-* toShort() will accept an array as parameter
+* toShort() will accept an array as parameter;
+* customize() will define the final code to generated url. Only for services that accept. For others services, nothing happens;
