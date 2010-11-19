@@ -46,8 +46,10 @@ require_once 'Http.php';
   *  [m] __construct() now using Try/Catch
   *
   *-----------------------------------------
-  *
+  * TO DO
   *-----------------------------------------
+  * - toShort() will accept an array as parameter
+  * 
   */
 
 class Shorten{
