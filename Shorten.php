@@ -1,7 +1,54 @@
 <?php
-
 require_once 'Http.php';
-
+/**
+  *
+  *
+  *---------------------------------------
+  *     INTRODUCTION
+  *---------------------------------------
+  * Shorten is a php class that centralizes the main shorten url services in the Web.
+  *
+  *----------------------------------------
+  *     HOW TO USE
+  *----------------------------------------
+  * //Creating object to
+  * $url = new Shorten('goo.gl');
+  *
+  * //Getting the short url
+  * echo $url->toShort('http://google.com');
+  * 
+  * //Getting Qrcode url image
+  * echo '<img src="' . $url->qrcode() . '" />';
+  *
+  * //Using with authentication
+  * $url = new Shorten('bit.ly');
+  * echo $url->auth('klawdyo', 'R_sad86dfs8sdf5sd5f7ds57d6s987asdds')
+  *          ->toShort('http://www.google.com')
+  *
+  *----------------------------------------
+  *     REQUIREMENTS
+  *----------------------------------------
+  * Shorten class requires Http class
+  *
+  *----------------------------------------
+  *     CHANGE LOG
+  *----------------------------------------
+  *  17/11/2010
+  *  [+] Initial class
+  *  [+] toShort() shortens a url
+  *  [+] qrcode() returns a image url to qrcode
+  *  [+] auth() allows some services to be used with authentication
+  *  [+] request() centralizes the request method and options
+  *  [+] parseReturn()
+  *
+  *  18/11/2010
+  *  [+] load() loads the specified plugin
+  *  [m] __construct() now using Try/Catch
+  *
+  *-----------------------------------------
+  *
+  *-----------------------------------------
+  */
 
 class Shorten{
     /**
@@ -32,7 +79,7 @@ class Shorten{
     
     
     /**
-      * Generate a link to a QrCode imagem
+      * Generate a link to a QrCode image
       *
       * @param integer $dimensions Dimensions to image
       * @return string Url to qrcode
@@ -42,10 +89,9 @@ class Shorten{
     }
     
     /**
-      * 
+      * Allow using plugins that require authentication
       *
-      * @param
-      * @return 
+      * @return void
       */
     public function auth(){
         if($this->objectPlugin->authRequired):
@@ -65,7 +111,7 @@ class Shorten{
                         );
                         break;
                 
-                    //case 'oauth':
+                    //case 'oauth': //Not implemented
                         //break;
                 endswitch;
             else:
@@ -78,9 +124,9 @@ class Shorten{
     }
     
     /**
-      * 
+      * Shorten url
       *
-      * @param
+      * @param string $url Url to shorten
       * @return 
       */
     public function toShort($url){
@@ -116,7 +162,7 @@ class Shorten{
     protected function request($method = 'post', $url, $params = array()){
         return Http::$method($url, $params);
     }
-    
+
     /**
       * Parses return
       *
