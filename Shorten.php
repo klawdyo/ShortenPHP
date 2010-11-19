@@ -49,10 +49,10 @@ require_once 'Http.php';
   *-----------------------------------------
   * TO DO
   *-----------------------------------------
-  * - toShort() will accept an array as parameter
+  * - toShort() will accept an array as parameter.
   * 
   * - customize() will define the final code to generated url. Only for services
-  * that accept. For others services, nothing happens
+  * that accept. For others services, nothing happens.
   */
 
 class Shorten{
