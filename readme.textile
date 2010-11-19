@@ -32,6 +32,6 @@ pre. $url = new Shorten('bit.ly');
 echo $url->auth('klawdyo', 'R_sad86dfs8sdf5sd5f7ds57d6s987asdds')
          ->toShort('http://www.google.com')
 
-h2. Requirements
+h2. Todo
 
-Shorten class requires "Http class":https://github.com/klawdyo/spaghetti-lib/blob/master/utils/Http.php
+* toShort() will accept an array as parameter
