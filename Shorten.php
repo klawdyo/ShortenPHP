@@ -44,12 +44,15 @@ require_once 'Http.php';
   *  18/11/2010
   *  [+] load() loads the specified plugin
   *  [m] __construct() now using Try/Catch
+  *  [m] load() throws an exception if the required plugin don't exists.
   *
   *-----------------------------------------
   * TO DO
   *-----------------------------------------
   * - toShort() will accept an array as parameter
   * 
+  * - customize() will define the final code to generated url. Only for services
+  * that accept. For others services, nothing happens
   */
 
 class Shorten{
