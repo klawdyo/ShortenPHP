@@ -55,7 +55,7 @@ require_once 'Http.php';
   * - customize() will define the final code to generated url. Only for services
   * that accept. For others services, nothing happens.
   *
-  * - expand() forces the target url discover
+  * - expand() forces the discover of the destination url
   */
 
 class Shorten{
