@@ -64,7 +64,13 @@ class Shorten{
       * Stores the object plugin
       */
     public $objectPlugin;
-
+    
+    /**
+      * @var bool $logging
+      * Log is ON?
+      */
+    public $logging = false;
+    
     /**
       * @var object
       * Stores the current short url
@@ -146,6 +152,8 @@ class Shorten{
             $output = $this->request($this->objectPlugin->method,
                                      $this->objectPlugin->shortenUrl,
                                      $params);
+            $this->log('Shorten::toShort()$output: '  . $output);
+            
             //Parsing url
             $this->shortUrl = $this->parseReturn($output);
 
@@ -168,6 +176,7 @@ class Shorten{
       * @return mixed Data returned from Webservice
       */
     protected function request($method = 'post', $url, $params = array()){
+        $this->log('Shorten::request()$url: ' . $url . PHP_EOL);
         return Http::$method($url, $params);
     }
 
@@ -213,6 +222,19 @@ class Shorten{
         else:
             throw new Exception('File "' . basename($file) . '" not found in "Shorten/Plugins" directory');
         endif;
+    }
+    
+    /**
+      *
+      *
+      *
+      */
+    protected function log($msg){
+        if($this->logging == true){
+            echo "<pre>" ;
+            print_r($msg);
+            echo "</pre>" . PHP_EOL;
+        }
     }
 }
 
