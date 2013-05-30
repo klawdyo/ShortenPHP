@@ -4,36 +4,50 @@ h4. Shorten is a php class that centralizes the main shorten url services in the
 
 h2. Available Plugins
 
-* miud.in
-* bit.ly - Requires authentication
-* goo.gl
-* zip.net
-* migre.me
-* toma.ai
-* bitw.in
-* pra.la
-* is.gd
-* tinyUrl
+* "miud.in":http://miud.in
+* "bit.ly":http://bit.ly - Requires oAuth authentication //Not implemented
+* "goo.gl":http://goo.gl - Requires oAuth authentication //Not implemented
+* "zip.net":http://zip.net
+* "migre.me":http://migre.me
+* "toma.ai":http://toma.ai - Returning error "temporariamente indisponível" in 30/05/2013
+* "bitw.in":http://bitw.in
+* "pra.la":http://pra.la
+* "is.gd":http://is.gd
+* "tinyUrl":http://tinyUrl.com
+* "tiny.cc":http://tiny.cc - Requires authentication: Login and ApiKey / Allows link customization
+* "adf.ly":http://adf.ly - Requires authentication: Uid and ApiKey
+* "va.mu":http://va.mu
 * and many more to come
 
 h2. How to use
 
-pre. $url = new Shorten('goo.gl');
+h3. Instantiating class
 
-pre. //Getting the short url
-echo $url->toShort('http://google.com');
+pre. $url = new Shorten('miud.in');
 
-pre. //Getting Qrcode url image
-echo '<img src="' . $url->qrcode() . '" />';
+h3. Getting the short url
+
+pre. echo $url->toShort('http://google.com');
+
+h3. Getting Qrcode url image
+
+pre. echo '<img src="' . $url->qrcode() . '" />';
 
 h3. Using with authentication
 
-pre. $url = new Shorten('bit.ly');
-echo $url->auth('klawdyo', 'R_sad86dfs8sdf5sd5f7ds57d6s987asdds')
+pre. $url = new Shorten('tiny.cc');
+echo $url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7')
          ->toShort('http://www.google.com');
 
-h2. Todo
+h3. URL customization
 
-* toShort() will accept an array as parameter;
-* customize() will define the final code to generated url. Only for services that accept. For others services, nothing happens;
+pre. $url = new Shorten('tiny.cc');
+echo $url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7')
+         ->customize('gogo')
+         ->toShort('http://www.google.com');
+
+h2. To Do
+
+* -toShort() will accept an array as parameter;-
+* -customize() will define the final code to generated url. Only for services that accept. For others services, nothing happens;-
 * expand() forces the discover of the destination url
