@@ -49,5 +49,5 @@ echo $url->auth('klawdyo', '0c8a46cb0-a21b-41db-bdb5-16a1851761f7')
 h2. To Do
 
 * -toShort() will accept an array as parameter;-
-* -customize() will define the final code to generated url. Only for services that accept. For others services, nothing happens;-
+* -customize() will define the final code to generated url. Only for services that accepts. For others services, nothing happens;-
 * expand() forces the discover of the destination url
