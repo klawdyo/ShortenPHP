@@ -49,14 +49,15 @@ require_once 'Http.php';
   *
   *  30/05/2010
   *  [+] customize() customizes an URL, for compatible services
+  *  [m] parseReturn() now accepts a custom return
   *
   *-----------------------------------------
   * TO DO
   *-----------------------------------------
   * - toShort() will accept an array as parameter.
   * 
-  * - customize() will define the final code to generated url. Only for services
-  * that accept. For others services, nothing happens.
+  * OK - customize() will define the final code to generated url. Only for services
+  * that accepts. For others services, nothing happens.
   *
   * - expand() forces the discover of the destination url
   */
