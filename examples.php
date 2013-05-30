@@ -14,7 +14,7 @@
    //$url = new Shorten('tinyurl'); //Funcionando em 30/05/2013
    //$url = new Shorten('toma.ai'); //Retornando erro "temporariamente indisponível" em 30/05/2013
    //$url = new Shorten('zip.net'); //Funcionando em 30/05/2013
-   //$url = new Shorten('adf.ly'); $url->auth('4235730', '9a0c27a44c975089bb52295b0971d44c');
+   $url = new Shorten('adf.ly'); $url->auth('4235730', '9a0c27a44c975089bb52295b0971d44c'); //Funcionando em 30/05/2013
 
 
    

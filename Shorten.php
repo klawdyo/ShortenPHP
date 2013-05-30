@@ -152,7 +152,7 @@ class Shorten{
             $output = $this->request($this->objectPlugin->method,
                                      $this->objectPlugin->shortenUrl,
                                      $params);
-            $this->log('Shorten::toShort()$output: '  . $output);
+            $this->log('Shorten::toShort()->$output: '  . $output);
             
             //Parsing url
             $this->shortUrl = $this->parseReturn($output);
@@ -176,7 +176,7 @@ class Shorten{
       * @return mixed Data returned from Webservice
       */
     protected function request($method = 'post', $url, $params = array()){
-        $this->log('Shorten::request()$url: ' . $url . PHP_EOL);
+        $this->log('Shorten::request()->$url: ' . $url . PHP_EOL);
         return Http::$method($url, $params);
     }
 
