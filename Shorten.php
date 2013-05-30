@@ -156,7 +156,9 @@ class Shorten{
             
             //Parsing url
             $this->shortUrl = $this->parseReturn($output);
-
+            
+            $this->log('Shorten::toShort()->$shortUrl: '  . $this->shortUrl);
+            
             //Key
             preg_match('([^/]+$)', $this->shortUrl, $key);
             $this->keyUrl = reset($key);
@@ -200,9 +202,15 @@ class Shorten{
                 return (string)$return[0];
             break;
         
+            //Quando não houver outra alternativa, tente executar o método parseReturn do plugin
+            case 'custom':
+                return  $this->objectPlugin->parseReturn($output);
+            break;
+        
             case 'txt': case 'plain': default:
                 return $output;
             break;
+        
         endswitch;
     }
     
