@@ -36,13 +36,13 @@ pre. echo '<img src="' . $url->qrcode() . '" />';
 h3. Using with authentication
 
 pre. $url = new Shorten('tiny.cc');
-echo $url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7')
+echo $url->auth('klawdyo', '0c8a46cb0-a21b-41db-bdb5-16a1851761f7')
          ->toShort('http://www.google.com');
 
 h3. URL customization
 
 pre. $url = new Shorten('tiny.cc');
-echo $url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7')
+echo $url->auth('klawdyo', '0c8a46cb0-a21b-41db-bdb5-16a1851761f7')
          ->customize('gogo')
          ->toShort('http://www.google.com');
 
