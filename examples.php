@@ -16,7 +16,7 @@
    //$url = new Shorten('zip.net'); //Funcionando em 30/05/2013
    //$url = new Shorten('adf.ly'); $url->auth('4235730', '9a0c27a44c975089bb52295b0971d44c'); //Funcionando em 30/05/2013
    //$url = new Shorten('va.mu'); //Funcionando em 30/05/2013
-   $url = new Shorten('tiny.cc'); $url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7');
+   $url = new Shorten('tiny.cc'); $url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7');//Funcionando em 30/05/2013
 
    
    //Showing messages

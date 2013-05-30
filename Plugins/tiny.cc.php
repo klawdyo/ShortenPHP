@@ -21,13 +21,13 @@
                            &longUrl=urlencode('http://example.com')
                            &login=tinyccapidemo
                            &apiKey=YourKey
-        method: POST or GET
+        method: GET
       
     ------------------------------------------------
       HOW TO
     ------------------------------------------------
       $url = new Shorten('tiny.cc');
-      echo url->toShort('http://google.com');
+      echo url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7')->toShort('http://google.com');
               
     ------------------------------------------------
      CHANGELOG
@@ -88,7 +88,7 @@ class tinycc{
       Chave que contém o retorno da url
      */
     //public $urlKey; //It's empty. txt example
-    public $urlKey = 'this->shortUrl->results->short_url}'; //json example key
+    //public $urlKey = 'short_url}'; //json example key
     //public $urlKey = 'parent/children1/short_url'; //xml example xpath
 
     
