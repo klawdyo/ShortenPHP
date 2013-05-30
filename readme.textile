@@ -1,6 +1,8 @@
 h1. Introduction
 
-h4. Shorten is a php class that centralizes the main shorten url services in the Web.
+h4. Shorten is a PHP class that centralizes the main shorten url services in the Web.
+
+h5. Shorten é uma classe PHP que centraliza o encurtamento de url dos principais serviços da Web.
 
 h2. Available Plugins
 
