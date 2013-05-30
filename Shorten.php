@@ -47,6 +47,9 @@ require_once 'Http.php';
   *  [m] load() throws an exception if the required plugin don't exists.
   *  [m] Fixed xml bug into parseReturn()
   *
+  *  30/05/2010
+  *  [+] customize() customizes an URL, for compatible services
+  *
   *-----------------------------------------
   * TO DO
   *-----------------------------------------
@@ -170,6 +173,20 @@ class Shorten{
     }
     
     /**
+      * Customizes an URL
+      *
+      * @param string $customUrl
+      * @return object $this
+      */
+    public function customize($customUrl){
+        if(isset($this->objectPlugin->customizeParam) && !empty($this->objectPlugin->customizeParam)){
+            $this->objectPlugin->defaultParams[$this->objectPlugin->customizeParam] = $customUrl;
+        }
+        
+        return $this;
+    }
+    
+    /**
       * Centralizes the request options
       *
       * @param string $method Request method type
@@ -179,6 +196,7 @@ class Shorten{
       */
     protected function request($method = 'post', $url, $params = array()){
         $this->log('Shorten::request()->$url: ' . $url . PHP_EOL);
+        
         return Http::$method($url, $params);
     }
 
