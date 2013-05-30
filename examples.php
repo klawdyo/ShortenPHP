@@ -23,6 +23,7 @@
    $url->logging = true;
    
    //Getting the short url
+   echo $url->toShort('http://www.yahoo.com');
    echo $url->toShort('http://www.google.com');
    
    

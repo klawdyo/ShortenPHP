@@ -148,6 +148,8 @@ class Shorten{
       * @return 
       */
     public function toShort($url){
+        $this->log('Shorten::toShort()->$url: '  . $url);
+
         if(!empty($this->objectPlugin)):
             //Merging default params into url params
             $params = array_merge($this->objectPlugin->defaultParams,
