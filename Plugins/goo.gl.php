@@ -35,7 +35,7 @@ class googl{
       Chave que contém o retorno da url
      */
     //public $urlKey; //txt example
-    public $urlKey = 'short_url';
+    //public $urlKey = 'short_url';
     //public $urlKey = 'parent/children1/short_url'; //xml example xpath
 
 
