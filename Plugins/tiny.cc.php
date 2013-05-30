@@ -27,7 +27,7 @@
       HOW TO
     ------------------------------------------------
       $url = new Shorten('tiny.cc');
-      echo url->auth('klawdyo', 'c8a46cb0-a21b-41db-bdb5-16a1851761f7')->toShort('http://google.com');
+      echo url->auth('klawdyo', 'c8a46cb0-a21b-40db-bdb5-16a1851761f7')->toShort('http://google.com');
               
     ------------------------------------------------
      CHANGELOG
