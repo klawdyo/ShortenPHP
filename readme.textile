@@ -18,7 +18,6 @@ h2. Available Plugins
 * "senta.la":http://senta.la
 * "tinyUrl":http://tinyUrl.com
 * "tiny.cc":http://tiny.cc - Requires authentication: Login and ApiKey / Allows link customization
-* "toma.ai":http://toma.ai - Returning error "temporariamente indisponível" in 30/05/2013
 * "va.mu":http://va.mu
 * "zip.net":http://zip.net
 * and many more to come
