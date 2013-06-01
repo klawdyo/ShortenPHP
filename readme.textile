@@ -6,19 +6,19 @@ h5. Shorten é uma classe PHP que centraliza o encurtamento de url dos principai
 
 h2. Available Plugins
 
-* "miud.in":http://miud.in
+* "adf.ly":http://adf.ly - Requires authentication: Uid and ApiKey
 * "bit.ly":http://bit.ly - Requires oAuth authentication //Not implemented
-* "goo.gl":http://goo.gl - Requires oAuth authentication //Not implemented
-* "zip.net":http://zip.net
-* "migre.me":http://migre.me
-* "toma.ai":http://toma.ai - Returning error "temporariamente indisponível" in 30/05/2013
 * "bitw.in":http://bitw.in
-* "pra.la":http://pra.la
+* "goo.gl":http://goo.gl - Requires oAuth authentication //Not implemented
 * "is.gd":http://is.gd
+* "migre.me":http://migre.me
+* "miud.in":http://miud.in
+* "pra.la":http://pra.la
 * "tinyUrl":http://tinyUrl.com
 * "tiny.cc":http://tiny.cc - Requires authentication: Login and ApiKey / Allows link customization
-* "adf.ly":http://adf.ly - Requires authentication: Uid and ApiKey
+* "toma.ai":http://toma.ai - Returning error "temporariamente indisponível" in 30/05/2013
 * "va.mu":http://va.mu
+* "zip.net":http://zip.net
 * and many more to come
 
 h2. How to use
