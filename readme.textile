@@ -20,6 +20,7 @@ h2. Available Plugins
 * "tinyUrl":http://tinyUrl.com
 * "tiny.cc":http://tiny.cc - Requires authentication: Login and ApiKey / Allows link customization
 * "va.mu":http://va.mu
+* "v.gd":http://v.gd
 * "zip.net":http://zip.net
 * and many more to come
 
