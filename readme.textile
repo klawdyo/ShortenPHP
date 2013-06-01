@@ -13,7 +13,9 @@ h2. Available Plugins
 * "is.gd":http://is.gd
 * "migre.me":http://migre.me
 * "miud.in":http://miud.in
+* "pei.do":http://pei.do
 * "pra.la":http://pra.la
+* "senta.la":http://senta.la
 * "tinyUrl":http://tinyUrl.com
 * "tiny.cc":http://tiny.cc - Requires authentication: Login and ApiKey / Allows link customization
 * "toma.ai":http://toma.ai - Returning error "temporariamente indisponível" in 30/05/2013
