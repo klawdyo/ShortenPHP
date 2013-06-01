@@ -9,6 +9,7 @@ h2. Available Plugins
 * "adf.ly":http://adf.ly - Requires authentication: Uid and ApiKey
 * "bit.ly":http://bit.ly - Requires oAuth authentication //Not implemented
 * "bitw.in":http://bitw.in
+* "cai.nu":http://cai.nu
 * "goo.gl":http://goo.gl - Requires oAuth authentication //Not implemented
 * "is.gd":http://is.gd
 * "migre.me":http://migre.me
