@@ -19,6 +19,7 @@ h2. Available Plugins
 * "senta.la":http://senta.la
 * "tinyUrl":http://tinyUrl.com
 * "tiny.cc":http://tiny.cc - Requires authentication: Login and ApiKey / Allows link customization
+* "vai.la":http://vai.la
 * "va.mu":http://va.mu
 * "v.gd":http://v.gd
 * "zip.net":http://zip.net
