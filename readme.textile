@@ -16,7 +16,6 @@ h2. Available Plugins
 * "miud.in":http://miud.in
 * "pei.do":http://pei.do
 * "pra.la":http://pra.la
-* "pud.im":http://pud.im
 * "senta.la":http://senta.la
 * "tinyUrl":http://tinyUrl.com
 * "tiny.cc":http://tiny.cc - Requires authentication: Login and ApiKey / Allows link customization
