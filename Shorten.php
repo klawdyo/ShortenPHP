@@ -119,7 +119,7 @@ class Shorten{
             if(count($values) == count($keys)):
                 switch($this->objectPlugin->authMethod):
                     case 'basic':
-                        Http::auth($args[0], $args[1]);
+                        Http::auth($values[0], $values[1]);
                         break;
                 
                     case 'urlParams':
